@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乌汶叻-泰国公主传记、生平事迹与王室家族关系</title>
+    <meta name="description" content="乌汶叻公主（Princess Ubol Ratana）泰国王室成员，朱拉隆功大帝之女。本站详细介绍乌汶叻公主的生平履历、从军经历、婚姻家庭、政治活动及在泰国社会中的影响力。">
+    <meta name="keywords" content="乌汶叻, 泰国公主, 朱拉隆功, 乌汶叻公主, 泰国王室, 诗琳通">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #800020; /* 泰国王室红 */
+            --secondary-color: #FFD700; /* 金色 */
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+            font-weight: normal;
+            font-size: 0.9rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/seed/thai_palace/1600/900.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #600018;
+            transform: translateY(-2px);
+        }
+
+        /* Intro Section */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .intro-text p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .intro-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e0e0e0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 11px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            box-shadow: 0 0 0 2px var(--primary-color);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Family Section */
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .family-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .family-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .family-img {
+            height: 200px;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .family-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .family-info {
+            padding: 20px;
+        }
+
+        .family-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .family-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: var(--white);
+            padding: 10px;
+            font-size: 0.9rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-dot {
+                left: 1px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                乌汶叻 <span>传记百科</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#profile">生平简介</a></li>
+                    <li><a href="#timeline">生平履历</a></li>
+                    <li><a href="#family">王室关系</a></li>
+                    <li><a href="#gallery">王室影像</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>乌汶叻公主</h1>
+                <p>朱拉隆功大帝之女，泰国首位留学归来的公主。她不仅是王室成员，更是一位致力于人道主义、教育和公共卫生事业的杰出女性。</p>
+                <a href="#profile" class="btn">了解更多</a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="section">
+            <div class="container">
+                <h2 class="section-title">生平简介</h2>
+                <div class="intro-grid">
+                    <div class="intro-image">
+                        <img src="https://picsum.photos/seed/ubol_ratana_portrait/600/400.jpg" alt="乌汶叻公主肖像">
+                    </div>
+                    <div class="intro-text">
+                        <h2>从王室成员到平民科学家</h2>
+                        <p><strong>乌汶叻公主</strong>（Princess Ubol Ratana），全名玛希敦·阿杜德（Maha Chakri Sirindhorn 是其胞妹，此处指乌汶叻），是泰国国王拉玛九世（普密蓬·阿杜德）的长女。她于1951年4月5日出生于瑞士洛桑，是泰国历史上第一位被允许在海外出生的王室成员。</p>
+                        <p>乌汶叻公主早年曾在泰国和瑞士接受教育，后赴美国麻省理工学院攻读化学工程学位。她于1972年与德国工程师彼得·詹德（Peter Ladd Jensen）结婚，并育有一子。这段婚姻在当时引发了巨大的王室争议，最终导致她放弃了王室头衔、继承权及皇家津贴，并搬离了泰国，开始了长达数十年的平民生活。</p>
+                        <p>尽管失去了王位继承权，乌汶叻公主并未远离公众视野。她利用自己的专业知识，积极投身于泰国和国际社会的人道主义工作，特别是在医疗援助和社区发展项目方面做出了显著贡献。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="section" style="background-color: #fff;">
+            <div class="container">
+                <h2 class="section-title">关键生平历程</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">1951年</div>
+                            <h3>出生于瑞士洛桑</h3>
+                            <p>作为拉玛九世的长女出生，是泰国历史上首位在海外出生的公主。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">1960年代-1970年代</div>
+                            <h3>求学与留学美国</h3>
+                            <p>在泰国接受基础教育后，前往美国麻省理工学院（MIT）学习化学工程。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">1972年</div>
+                            <h3>与彼得·詹德结婚</h3>
+                            <p>与德国工程师结婚，同年因王室婚姻规定放弃头衔及继承权。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">1973年</div>
+                            <h3>定居德国</h3>
+                            <p>举家搬迁至德国，后育有一子。长期在德国从事科学研究工作。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2000年代至今</div>
+                            <h3>人道主义工作</h3>
+                            <p>频繁往返于泰国与德国之间，致力于医疗援助、社区教育及环境保护项目。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Family Section -->
+        <section id="family" class="section">
+            <div class="container">
+                <h2 class="section-title">王室家族关系</h2>
+                <p class="section-subtitle">乌汶叻公主与泰国王室其他成员的关系网络</p>
+                <div class="family-grid">
+                    <div class="family-card">
+                        <div class="family-img">
+                            <img src="https://picsum.photos/seed/bhumibol/300/200.jpg" alt="普密蓬国王">
+                        </div>
+                        <div class="family-info">
+                            <h3>拉玛九世 (普密蓬)</h3>
+                            <p>父亲，泰国前国王，朱拉隆功大帝的第九世孙。</p>
+                        </div>
+                    </div>
+                    <div class="family-card">
+                        <div class="family-img">
+                            <img src="https://picsum.photos/seed/sirindhorn/300/200.jpg" alt="诗琳通公主">
+                        </div>
+                        <div class="family-info">
+                            <h3>诗琳通公主</h3>
+                            <p>胞妹，现任深受爱戴的泰国公主，常代表王室出访。</p>
+                        </div>
+                    </div>
+                    <div class="family-card">
+                        <div class="family-img">
+                            <img src="https://picsum.photos/seed/wachiralongkorn/300/200.jpg" alt="哇集拉隆功">
+                        </div>
+                        <div class="family-info">
+                            <h3>哇集拉隆功 (拉玛十世)</h3>
+                            <p>胞弟，现任泰国国王。</p>
+                        </div>
+                    </div>
+                    <div class="family-card">
+                        <div class="family-img">
+                            <img src="https://picsum.photos/seed/peter_jensen/300/200.jpg" alt="彼得·詹德">
+                        </div>
+                        <div class="family-info">
+                            <h3>彼得·詹德</h3>
+                            <p>前夫，德国物理学家，两人育有一子，名为Thipanachai。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section" style="background-color: #fff;">
+            <div class="container">
+                <h2 class="section-title">王室影像</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/thai_woman/400/300.jpg" alt="早年生活">
+                        <div class="gallery-caption">早年王室生活</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/doctor/400/300.jpg" alt="医疗援助">
+                        <div class="gallery-caption">参与医疗援助项目</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/teaching/400/300.jpg" alt="教育推广">
+                        <div class="gallery-caption">推广社区教育</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/nature/400/300.jpg" alt="环境保护">
+                        <div class="gallery-caption">环境保护活动</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/meeting/400/300.jpg" alt="公务访问">
+                        <div class="gallery-caption">公务访问与交流</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/family_reunion/400/300.jpg" alt="家庭团聚">
+                        <div class="gallery-caption">王室家庭聚会</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于乌汶叻公主</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">本站致力于整理与泰国乌汶叻公主相关的公开资料，包括其生平、家庭关系及社会贡献，为公众提供准确的历史信息参考。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#profile">生平简介</a></li>
+                        <li><a href="#timeline">生平履历</a></li>
+                        <li><a href="#family">王室关系</a></li>
+                        <li><a href="#gallery">影像资料</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关参考</h4>
+                    <ul>
+                        <li><a href="#">泰国王室官网</a></li>
+                        <li><a href="#">麻省理工学院校友录</a></li>
+                        <li><a href="#">泰国历史文献</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 泰国王室人物资料馆. 保留所有权利. 本站内容仅供学习与参考.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
