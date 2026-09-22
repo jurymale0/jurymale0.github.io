@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="卡拉赞钥匙任务攻略：详细解析正义远征军声望开启流程、暮光审判任务线、以及通往馆长密室的钥匙获取步骤，助您顺利进入副本。">
+    <meta name="keywords" content="卡拉赞钥匙任务, 正义远征军声望, 暮光审判, 馆长密室, 魔兽世界攻略">
+    <title>卡拉赞钥匙任务-正义远征军声望开启与暮光审判攻略指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #c4a000;
+            --secondary-color: #1a1a1a;
+            --accent-color: #ff8000;
+            --bg-color: #0d0d0d;
+            --card-bg: #1a1a1a;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: #333;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--bg-color)), url('https://picsum.photos/seed/karazhan/1200/600.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 6px rgba(0,0,0,0.8);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            background-color: rgba(196, 160, 0, 0.2);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            color: #fff;
+        }
+
+        /* Steps Grid */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .step-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border-color: var(--primary-color);
+        }
+
+        .step-header {
+            background-color: rgba(196, 160, 0, 0.1);
+            padding: 15px 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: #000;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .step-body {
+            padding: 20px;
+        }
+
+        .step-body h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .step-body p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .task-list {
+            list-style: none;
+        }
+
+        .task-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .task-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Faction Reputation Section */
+        .reputation-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            border: 1px solid var(--border-color);
+        }
+
+        .reputation-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .reputation-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .progress-bar {
+            background-color: #333;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            height: 100%;
+            width: 0%;
+            transition: width 1s ease-in-out;
+        }
+
+        /* Tips Section */
+        .tips-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .tip-item {
+            background-color: rgba(255, 128, 0, 0.05);
+            border-left: 3px solid var(--accent-color);
+            padding: 15px;
+            color: #ddd;
+        }
+
+        .tip-item strong {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>⚔️</span> 魔兽世界攻略库
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">副本指南</a></li>
+                    <li><a href="#">任务大全</a></li>
+                    <li><a href="#">职业攻略</a></li>
+                    <li><a href="#">版本资讯</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="status-badge">核心副本：卡拉赞</span>
+            <h1>卡拉赞钥匙任务</h1>
+            <p>正义远征军声望开启流程与暮光审判全任务线详解，助您顺利进入馆长密室。</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Section 1: The Process -->
+        <section id="guide">
+            <h2 class="section-title">任务流程概览</h2>
+            <div class="steps-grid">
+                <!-- Step 1 -->
+                <article class="step-card">
+                    <div class="step-header">
+                        <span>第一步：正义远征军</span>
+                        <span class="step-number">1</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>开启声望中立</h3>
+                        <p>首先需要完成前置任务线，将正义远征军声望提升至中立（通常在塞纳里奥要塞完成一系列任务）。</p>
+                        <ul class="task-list">
+                            <li>接取任务：正义远征军</li>
+                            <li>前往塞纳里奥避难所（纳格兰）</li>
+                            <li>与军需官艾拉·歌恩对话开启声望</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Step 2 -->
+                <article class="step-card">
+                    <div class="step-header">
+                        <span>第二步：提升声望至崇敬</span>
+                        <span class="step-number">2</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>解锁任务资格</h3>
+                        <p>正义远征军声望必须达到崇敬（5000/7500）才能开启通往馆长密室的任务线。</p>
+                        <ul class="task-list">
+                            <li>前往纳格兰，与军需官艾拉·歌恩对话</li>
+                            <li>购买并完成“正义远征军的信使”任务</li>
+                            <li>前往时光之穴，传送至黑暗神殿入口</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Step 3 -->
+                <article class="step-card">
+                    <div class="step-header">
+                        <span>第三步：暮光审判</span>
+                        <span class="step-number">3</span>
+                    </div>
+                    <div class="step-body">
+                        <h3>获取最终钥匙</h3>
+                        <p>在黑暗神殿完成一系列任务后，将获得开启卡拉赞钥匙的物品。</p>
+                        <ul class="task-list">
+                            <li>击杀凯尔萨斯·逐日者</li>
+                            <li>拾取宝箱中的“暮光审判”</li>
+                            <li>返回纳格兰军需官处提交任务</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 2: Detailed Guide -->
+        <section id="details">
+            <h2 class="section-title">任务详情与执行建议</h2>
+            
+            <div class="reputation-section">
+                <div class="reputation-header">
+                    <div class="reputation-icon">🛡️</div>
+                    <div>
+                        <h3>正义远征军声望要求</h3>
+                        <p style="color:var(--text-muted); font-size:0.9rem;">位于纳格兰的塞纳里奥要塞</p>
+                    </div>
+                </div>
+                <p>要开启通往卡拉赞的钥匙任务，你必须将正义远征军的声望提升至<strong>崇敬</strong>。这是所有后续任务的前提条件。</p>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%;"></div>
+                </div>
+                <p style="text-align: right; font-size: 0.85rem;">当前状态：崇敬 (7500/7500)</p>
+
+                <div style="margin-top: 20px;">
+                    <h4 style="margin-bottom: 10px; color: #fff;">快速提升声望方式：</h4>
+                    <ul class="task-list">
+                        <li>每日任务“掠夺者之颚”和“纳格兰的荣耀”</li>
+                        <li>购买并完成任务物品“奥尔多/占星者符文”</li>
+                        <li>在纳格兰击杀怪物（虽然效率较低）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tips-container">
+                <article class="tip-item">
+                    <strong>任务提示：</strong> 在黑暗神殿击杀凯尔萨斯后，宝箱通常位于他死亡位置附近的显眼处，拾取时注意周围是否有敌对怪物。
+                </article>
+                <article class="tip-item">
+                    <strong>传送门使用：</strong> 完成暮光审判任务后，军需官处会提供传送至卡拉赞的传送门，可以直接飞入副本。
+                </article>
+                <article class="tip-item">
+                    <strong>前置副本：</strong> 确保你的装备等级足以应对黑暗神殿的精英怪，建议在进入前准备好相应的药水和合剂。
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>本站为玩家攻略整理，所有游戏内容版权归暴雪娱乐所有。</p>
+            <p>&copy; 2023 魔兽世界攻略库 - 专注于游戏攻略分享</p>
+        </div>
+    </footer>
+
+</body>
+</html>
