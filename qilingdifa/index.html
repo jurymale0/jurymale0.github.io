@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欺凌蒂法小游戏 - 蒂法·斯特劳夫互动体验</title>
+    <meta name="description" content="欺凌蒂法小游戏，提供多种互动玩法，包含剧情模拟、策略挑战及趣味小游戏，满足玩家对蒂法角色的不同互动需求，探索游戏玩法与攻略。">
+    <meta name="keywords" content="欺凌蒂法小游戏, 蒂法, FF7, 蒂法攻略, 互动游戏">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #5c6bc0;
+            --secondary-color: #3f51b5;
+            --accent-color: #ff4081;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 12px;
+            --spacing: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--secondary-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing) 60px;
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        /* Game Grid */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .game-stats {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* Interactive Demo Area */
+        .demo-area {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+
+        .demo-interface {
+            background-color: #2a2a2a;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .screen {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .character-sprite {
+            font-size: 4rem;
+            transition: all 0.3s ease;
+        }
+
+        .dialog-box {
+            background-color: rgba(0,0,0,0.8);
+            padding: 15px;
+            border-top: 2px solid var(--accent-color);
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dialog-text {
+            font-size: 1rem;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .control-btn {
+            background-color: #444;
+            border: none;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .control-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .control-btn:disabled {
+            background-color: #333;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        /* Info Sections */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .info-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            line-height: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .nav-container { padding: 0 15px; }
+            nav ul { display: none; } /* Simplified for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>🎮</span> 蒂法互动体验馆
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#games">所有游戏</a></li>
+                    <li><a href="#strategy">玩法攻略</a></li>
+                    <li><a href="#community">社区讨论</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>欺凌蒂法小游戏</h1>
+        <p>探索蒂法·斯特劳夫在不同情境下的互动体验。包含策略模拟、趣味问答及沉浸式剧情小游戏。</p>
+        <div>
+            <a href="#games" class="btn">开始体验</a>
+            <a href="#info" class="btn btn-outline">了解详情</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Interactive Demo Section -->
+        <section class="section-header">
+            <h2>🎮 实时互动演示</h2>
+            <span style="color: #666; font-size: 0.9rem;">点击按钮体验基础互动</span>
+        </section>
+
+        <article class="demo-area">
+            <div class="demo-interface">
+                <div class="screen">
+                    <div id="sprite" class="character-sprite">🧖‍♀️</div>
+                </div>
+                <div class="dialog-box">
+                    <span id="dialog" class="dialog-text">蒂法正在休息，请选择你的行动...</span>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="control-btn" onclick="playAction('greet')">打招呼</button>
+                <button class="control-btn" onclick="playAction('compliment')">夸奖</button>
+                <button class="control-btn" onclick="playAction('ignore')">无视</button>
+                <button class="control-btn" onclick="playAction('trick')">恶作剧</button>
+                <button class="control-btn" onclick="playAction('help')">帮助</button>
+                <button class="control-btn" onclick="playAction('attack')">攻击</button>
+            </div>
+        </article>
+
+        <!-- Game Categories -->
+        <section id="games">
+            <div class="section-header">
+                <h2>热门游戏分类</h2>
+                <a href="#" style="color: var(--accent-color); text-decoration: none; font-size: 0.9rem;">查看全部 &rarr;</a>
+            </div>
+
+            <div class="game-grid">
+                <!-- Card 1 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/tifa1/400/250" alt="策略模拟">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">策略模拟</span>
+                        <h3 class="card-title">职场生存指南</h3>
+                        <p class="card-desc">在克劳德的公司里应对各种突发状况，体验职场中的微妙互动与策略选择。</p>
+                        <div class="card-footer">
+                            <span class="game-stats">难度: ★★☆☆☆</span>
+                            <button class="btn" style="padding: 8px 20px; font-size: 0.9rem;">开始</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/tifa2/400/250" alt="对话选择">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">对话选择</span>
+                        <h3 class="card-title">深夜酒吧问答</h3>
+                        <p class="card-desc">在第七天堂酒吧与蒂法独处，通过对话选项改变她的心情和剧情走向。</p>
+                        <div class="card-footer">
+                            <span class="game-stats">难度: ★★★☆☆</span>
+                            <button class="btn" style="padding: 8px 20px; font-size: 0.9rem;">开始</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/tifa3/400/250" alt="小游戏">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">趣味小游戏</span>
+                        <h3 class="card-title">格斗连击挑战</h3>
+                        <p class="card-desc">模拟格斗场景，通过精准操作触发特殊互动奖励。</p>
+                        <div class="card-footer">
+                            <span class="game-stats">难度: ★★★★☆</span>
+                            <button class="btn" style="padding: 8px 20px; font-size: 0.9rem;">开始</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section id="info" style="margin-top: 60px;">
+            <h2 class="section-title">游戏玩法与说明</h2>
+            <div class="info-grid">
+                <div>
+                    <h3>游戏特色</h3>
+                    <p style="margin-bottom: 20px; color: #666;">我们的游戏旨在提供沉浸式的互动体验，通过精细的剧情分支和多样的互动选项，让玩家感受到角色的个性魅力。</p>
+                    <ul class="info-list">
+                        <li>多结局设定，你的选择影响最终结果。</li>
+                        <li>高清立绘与动态表情捕捉技术。</li>
+                        <li>支持多种设备，随时随地畅玩。</li>
+                        <li>定期更新剧情内容与隐藏彩蛋。</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>注意事项</h3>
+                    <p style="margin-bottom: 20px; color: #666;">请理性对待游戏内容，尊重角色设定。本站所有游戏仅供娱乐参考，不包含任何不适宜的成人内容。</p>
+                    <ul class="info-list">
+                        <li>请确保网络环境稳定以加载资源。</li>
+                        <li>游戏数据仅存储在本地浏览器中。</li>
+                        <li>未成年人请在家长指导下游玩。</li>
+                        <li>遵守社区公约，文明互动。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">隐私政策</a>
+            <a href="#">联系客服</a>
+            <a href="#">免责声明</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.8rem;">&copy; 2023 蒂法互动体验馆. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function playAction(action) {
+            const sprite = document.getElementById('sprite');
+            const dialog = document.getElementById('dialog');
+            
+            // Reset animation
+            dialog.style.animation = 'none';
+            dialog.offsetHeight; /* trigger reflow */
+            dialog.style.animation = 'fadeIn 0.5s';
+
+            switch(action) {
+                case 'greet':
+                    sprite.textContent = '🧖‍♀️';
+                    dialog.textContent = '蒂法抬起头，微笑着回应你的问候。';
+                    break;
+                case 'compliment':
+                    sprite.textContent = '😊';
+                    dialog.textContent = '蒂法有些害羞，脸红着说谢谢。';
+                    break;
+                case 'ignore':
+                    sprite.textContent = '😐';
+                    dialog.textContent = '蒂法看着别处，没有回应。气氛变得尴尬。';
+                    break;
+                case 'trick':
+                    sprite.textContent = '😠';
+                    dialog.textContent = '蒂法生气了，皱起了眉头。';
+                    break;
+                case 'help':
+                    sprite.textContent = '🤝';
+                    dialog.textContent = '蒂法很感激你的帮助，心情变好了。';
+                    break;
+                case 'attack':
+                    sprite.textContent = '💢';
+                    dialog.textContent = '蒂法被激怒了，摆出了防御姿态！';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
