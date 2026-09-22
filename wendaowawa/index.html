@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="问道娃娃拜师系统全攻略：包含拜师条件、流程步骤、收益分析、师徒任务玩法及注意事项。帮助玩家快速建立师徒关系，提升游戏体验与奖励获取。">
+    <meta name="keywords" content="问道娃娃拜师,问道师徒系统,问道新手攻略,问道拜师流程,问道师徒任务">
+    <title>问道娃娃拜师-新手入门与师徒系统全攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d4a017; /* 金色，契合问道武侠风 */
+            --secondary-color: #8b5a2b;
+            --bg-color: #f4f1ea;
+            --text-color: #333;
+            --text-light: #666;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: #2c2c2c;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 var(--spacing-unit);
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/wuxia_bg/1200/400.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #b8860b;
+        }
+
+        /* Main Content Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        /* Section Styling */
+        section {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Process Steps */
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .step-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .step-num {
+            background-color: var(--secondary-color);
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+
+        .step-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Requirements List */
+        .req-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .req-card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+
+        .req-card strong {
+            display: block;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .benefit-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .benefit-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .faq-item h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Tips */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .tip-box {
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .tip-box strong {
+            display: block;
+            color: #b8860b;
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #999;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <span>📜</span> 问道攻略网
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">首页</a>
+            <a href="#">新手指南</a>
+            <a href="#">师徒系统</a>
+            <a href="#">玩法攻略</a>
+            <a href="#">问答社区</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>问道娃娃拜师全流程解析</h1>
+        <p>从入门到精通，掌握问道师徒系统核心玩法，获取丰厚奖励与经验加成。</p>
+        <button class="btn" onclick="window.scrollTo(0, 600)">查看详细攻略</button>
+    </section>
+
+    <div class="container">
+        <!-- Main Content -->
+        <div class="content-area">
+            <!-- What is Master-Apprentice -->
+            <section>
+                <h2 class="section-title">什么是师徒系统？</h2>
+                <p style="margin-bottom: 20px; color: var(--text-light);">
+                    在《问道》游戏中，师徒系统是玩家之间建立情感连接并互相帮助的重要机制。通过“娃娃拜师”或“玩家拜师”，徒弟可以跟随师父学习游戏技巧，共同完成任务，而师父则能获得大量经验、银两以及特殊的师徒称号奖励。
+                </p>
+                <div class="tips-grid">
+                    <div class="tip-box">
+                        <strong>👶 娃娃拜师</strong>
+                        针对游戏内的宠物娃娃，通过拜师可以提升娃娃的忠诚度及资质上限。
+                    </div>
+                    <div class="tip-box">
+                        <strong>👤 玩家拜师</strong>
+                        针对注册时间较短的玩家，通过拜师可以获得师徒任务及大量成长经验。
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process -->
+            <section>
+                <h2 class="section-title">拜师流程详解</h2>
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <div class="step-content">
+                            <h3>寻找师父</h3>
+                            <p>徒弟需满足等级要求（通常为10级以上），前往天墉城NPC“拜师使者”处查询符合条件的师父列表。师父需满足注册时间要求（通常为7天或更高）。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <div class="step-content">
+                            <h3>发起拜师请求</h3>
+                            <p>徒弟在拜师使者处选择心仪的师父，并发送拜师请求。师父收到请求后，需点击“同意”才能建立师徒关系。双方好感度将直接影响后续任务收益。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <div class="step-content">
+                            <h3>师徒任务</h3>
+                            <p>建立关系后，师徒双方会获得“师徒令”。点击师徒令即可接取每日任务，任务类型包括护送镖车、挑战试炼等，完成后可获得大量经验奖励。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <div class="step-content">
+                            <h3>解除关系</h3>
+                            <p>师徒关系通常持续一段时间（如30天）。若需解除，可在拜师使者处操作，但解除后一段时间内无法再次拜师。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Requirements -->
+            <section>
+                <h2 class="section-title">拜师条件与限制</h2>
+                <div class="req-list">
+                    <div class="req-card">
+                        <strong>徒弟等级</strong>
+                        通常要求达到10级或20级以上，具体视版本而定。
+                    </div>
+                    <div class="req-card">
+                        <strong>师父年限</strong>
+                        师父账号注册时间需满足系统设定的最低天数，以保证师父具备一定的游戏基础。
+                    </div>
+                    <div class="req-card">
+                        <strong>师徒关系</strong>
+                        同一时间，一个玩家只能拥有一名徒弟。
+                    </div>
+                    <div class="req-card">
+                        <strong>好感度</strong>
+                        双方好感度达到一定数值（如100），方可开启更高级的师徒任务。
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+            <!-- Benefits -->
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">拜师有什么好处？</h3>
+                <ul class="benefit-list">
+                    <li>获得大量师徒任务经验，助力快速升级。</li>
+                    <li>完成护送任务可获得稀有道具及银两奖励。</li>
+                    <li>提升徒弟的忠诚度上限，有助于后期洗练。</li>
+                    <li>增加师徒间的互动乐趣，结交游戏好友。</li>
+                </ul>
+            </div>
+
+            <!-- FAQ -->
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">常见问题 (FAQ)</h3>
+                <div class="faq-item">
+                    <h4>拜师失败怎么办？</h4>
+                    <p>请检查双方等级是否达标、师父注册时间是否满足要求，以及是否处于冷却期。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>如何提高师徒任务奖励？</h4>
+                    <p>保持日常互动，提升好感度，并按时完成每日任务。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>娃娃拜师和玩家拜师有什么区别？</h4>
+                    <p>娃娃拜师主要针对宠物属性，玩家拜师针对角色成长。</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2023 问道攻略网. 本站内容仅供玩家参考，不代表官方立场。</p>
+    <p>本页面基于HTML5技术构建，旨在提供清晰、准确的游戏玩法指引。</p>
+</footer>
+
+</body>
+</html>
