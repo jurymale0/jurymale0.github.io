@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超级奥特曼-经典特摄英雄图鉴与世界观解析</title>
+    <meta name="description" content="本站致力于收录并解析超级奥特曼系列，涵盖昭和、平成、令和等不同时代的奥特曼作品，详细介绍角色设定、必杀技、怪兽数据及特摄文化背景。">
+    <meta name="keywords" content="超级奥特曼,奥特曼,特摄,昭和奥特曼,平成奥特曼,令和奥特曼,怪兽,特摄文化">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00d2ff;
+            --secondary-color: #3a7bd5;
+            --accent-color: #ff9a9e;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f4f6f9;
+            --bg-card: #ffffff;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSI+PHBhdGggZD0iTTAgMzhoNDB2Mkgwdi0yaDQwdjJIMHoiLz48L3N2Zz4=');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.6);
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #e1e4e8;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 24px;
+            background-color: var(--secondary-color);
+            border-radius: 3px;
+        }
+
+        .view-all {
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .view-all:hover {
+            text-decoration: underline;
+        }
+
+        /* Timeline / Era Section */
+        .era-section {
+            padding: 60px 0;
+        }
+
+        .era-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .era-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .era-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-color);
+        }
+
+        .era-image {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+        }
+        
+        .era-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .era-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .era-content {
+            padding: 20px;
+        }
+
+        .era-content h3 {
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .era-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Character Grid */
+        .character-section {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .char-card {
+            background: var(--bg-body);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .char-card:hover {
+            background: white;
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+        }
+
+        .char-avatar {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .char-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .char-name {
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--text-main);
+        }
+
+        .char-origin {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .char-ability {
+            display: inline-block;
+            font-size: 0.75rem;
+            background-color: #eef5fc;
+            color: var(--secondary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        /* Info Grid */
+        .info-section {
+            padding: 60px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .info-sidebar {
+            background-color: white;
+            padding: 24px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .info-sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 12px;
+        }
+
+        .sidebar-list li {
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 8px;
+        }
+
+        .sidebar-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .sidebar-list a:hover {
+            color: var(--secondary-color);
+        }
+
+        .sidebar-list span {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .info-main article {
+            background-color: white;
+            padding: 32px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        .article-header {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 16px;
+        }
+
+        .article-title {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .article-body {
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+        .article-body p {
+            margin-bottom: 16px;
+        }
+
+        .article-body h4 {
+            margin: 24px 0 12px;
+            color: var(--secondary-color);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            background-color: #eef2f5;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: white;
+            margin-bottom: 16px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 16px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #888;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>✦</span> 超级奥特曼
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#eras">时代演变</a></li>
+                    <li><a href="#characters">英雄图鉴</a></li>
+                    <li><a href="#knowledge">特摄百科</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>光之巨人的传说</h1>
+                <p>探索昭和、平成到令和的奥特曼世界，解读光之巨人的起源、必杀技与怪兽百科。</p>
+                <a href="#characters" class="cta-button">查看英雄图鉴</a>
+            </div>
+        </section>
+
+        <section id="eras" class="era-section container">
+            <div class="section-header">
+                <h2 class="section-title">时代演变</h2>
+                <a href="#" class="view-all">查看更多 &rarr;</a>
+            </div>
+            <div class="era-grid">
+                <article class="era-card">
+                    <div class="era-image">
+                        <span class="era-badge">昭和时代</span>
+                        <img src="https://picsum.photos/seed/ultraman_showa/400/300" alt="昭和奥特曼海报">
+                    </div>
+                    <div class="era-content">
+                        <h3>昭和系奥特曼</h3>
+                        <p>以初代奥特曼、赛文、杰克等为代表的经典时期，奠定了特摄文化的基石，风格硬朗且富有正义感。</p>
+                    </div>
+                </article>
+                <article class="era-card">
+                    <div class="era-image">
+                        <span class="era-badge">平成时代</span>
+                        <img src="https://picsum.photos/seed/ultraman_heisei/400/300" alt="平成奥特曼海报">
+                    </div>
+                    <div class="era-content">
+                        <h3>平成系奥特曼</h3>
+                        <p>高斯、迪迦、戴拿等作品，引入了更复杂的剧情和哲学思考，迪迦更是成为现象级的特摄作品。</p>
+                    </div>
+                </article>
+                <article class="era-card">
+                    <div class="era-image">
+                        <span class="era-badge">令和时代</span>
+                        <img src="https://picsum.photos/seed/ultraman_reiwa/400/300" alt="令和奥特曼海报">
+                    </div>
+                    <div class="era-content">
+                        <h3>令和系奥特曼</h3>
+                        <p>泽塔、特利迦等新锐作品，在致敬经典的同时，融入了现代科技与新的战斗风格。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="characters" class="character-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">英雄图鉴</h2>
+                    <a href="#" class="view-all">查看全部 &rarr;</a>
+                </div>
+                <div class="char-grid">
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/ultraman1/100/100" alt="初代奥特曼">
+                        </div>
+                        <h3 class="char-name">初代奥特曼</h3>
+                        <p class="char-origin">M78星云·光之国</p>
+                        <span class="char-ability">斯派修姆光线</span>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/ultraman2/100/100" alt="赛文奥特曼">
+                        </div>
+                        <h3 class="char-name">赛文奥特曼</h3>
+                        <p class="char-origin">M78星云·光之国</p>
+                        <span class="char-ability">头镖</span>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/ultraman3/100/100" alt="迪迦奥特曼">
+                        </div>
+                        <h3 class="char-name">迪迦奥特曼</h3>
+                        <p class="char-origin">超古代光之巨人</p>
+                        <span class="char-ability">哉佩利敖光线</span>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/ultraman4/100/100" alt="泽塔奥特曼">
+                        </div>
+                        <h3 class="char-name">泽塔奥特曼</h3>
+                        <p class="char-origin">M78星云·光之国</p>
+                        <span class="char-ability">Z光线</span>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/ultraman5/100/100" alt="奈克瑟斯奥特曼">
+                        </div>
+                        <h3 class="char-name">奈克瑟斯奥特曼</h3>
+                        <p class="char-origin">奈克瑟斯适能者</p>
+                        <span class="char-ability">十字冲击</span>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/ultraman6/100/100" alt="罗布奥特曼">
+                        </div>
+                        <h3 class="char-name">罗布奥特曼</h3>
+                        <p class="char-origin">地球·罗布家庭</p>
+                        <span class="char-ability">罗布飞踢</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="knowledge" class="info-section container">
+            <div class="section-header">
+                <h2 class="section-title">特摄百科</h2>
+            </div>
+            <div class="info-grid">
+                <aside class="info-sidebar">
+                    <h3>热门分类</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="#">怪兽图鉴 <span>128</span></a></li>
+                        <li><a href="#">必杀技解析 <span>85</span></a></li>
+                        <li><a href="#">武器装备 <span>62</span></a></li>
+                        <li><a href="#">剧场版电影 <span>45</span></a></li>
+                        <li><a href="#">变身器大全 <span>33</span></a></li>
+                        <li><a href="#">皮套演员 <span>12</span></a></li>
+                    </ul>
+                </aside>
+                <div class="info-main">
+                    <article>
+                        <header class="article-header">
+                            <h2 class="article-title">光之国与M78星云的起源</h2>
+                            <div class="article-meta">发布于 2023-10-24 | 分类: 世界观设定</div>
+                        </header>
+                        <div class="article-body">
+                            <p>M78星云云团中心，也就是光之国，距离地球约300万光年。这里居住着拥有悠久历史的奥特曼一族。在很久以前，M78星云曾发生大爆炸，巨大的能量释放将星云染成了永恒的蓝色，同时也诞生了初代奥特曼。</p>
+                            <h4>光之国的防御机制</h4>
+                            <p>光之国拥有强大的防御系统，其中包括著名的“光之屏障”。这是一种能够抵挡各种物理和能量攻击的力场，是奥特曼在战斗中保护地球和自身的重要手段。此外，光之国还设有严格的审判庭，负责监督奥特曼的行为，确保正义的执行。</p>
+                            <h4>地球防卫队的作用</h4>
+                            <p>在许多奥特曼系列中，人类并非毫无还手之力。地球防卫队（GDF）等组织为奥特曼提供了情报支持、后勤补给以及必要的配合。人类与光之巨人的合作，构成了特摄作品中“人与自然、人与科技”和谐共处的主题核心。</p>
+                        </div>
+                    </article>
+                    <article>
+                        <header class="article-header">
+                            <h2 class="article-title">必杀技的科学原理</h2>
+                            <div class="article-meta">发布于 2023-10-20 | 分类: 战斗解析</div>
+                        </header>
+                        <div class="article-body">
+                            <p>奥特曼的必杀技通常蕴含着巨大的能量，最典型的如“斯派修姆光线”。在设定上，这种光线是将体内的两种能量源——斯派修姆物质进行瞬间融合与释放，形成的高温高压光束。这种攻击方式在视觉上极具冲击力，同时也象征着光与暗的终极对决。</p>
+                            <p>除了光线技，物理攻击如“头镖”和“奥特飞踢”也广受粉丝喜爱。头镖是赛文奥特曼的标志性武器，通过改变磁场和旋转速度，可以切割钢铁和坚硬的怪兽皮肤。而奥特飞踢则是利用奥特曼巨大的力量和跳跃力，在空中对敌人进行毁灭性的打击。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <div class="container faq-container">
+                <div class="section-header" style="justify-content: center;">
+                    <h2 class="section-title">常见问题 (FAQ)</h2>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>奥特曼的皮套演员是谁？</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>奥特曼系列的皮套演员（Suit Actor）是特摄文化的重要组成部分。许多知名演员如寺田辻郎、大古刚志等，都曾扮演过奥特曼。皮套演员需要在狭小的空间内进行高难度的动作表演，同时还要保持角色的威严感。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>为什么奥特曼会变成彩色计时器闪烁？</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>彩色计时器（彩色计时器）是奥特曼胸口的红色宝石。它不仅是装饰，更是生命维持系统的指示灯。当奥特曼能量不足或受到重伤时，计时器会由蓝色变为红色并开始闪烁，提示奥特曼必须尽快结束战斗或撤退。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>有哪些经典的奥特曼剧场版？</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>《奥特曼：泰罗奥特曼》的《再见，奥特兄弟》、《奥特曼》系列的《大决战！超奥特8兄弟》以及《迪迦奥特曼》的《最终圣战》都是备受好评的剧场版作品。这些电影通常剧情独立于TV版，制作精良，且往往会有多位奥特曼登场。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>本站为超级奥特曼爱好者提供最全面、最及时的资讯与图鉴服务，致力于传承特摄文化。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">英雄图鉴</a></li>
+                        <li><a href="#">怪兽数据库</a></li>
+                        <li><a href="#">分集列表</a></li>
+                        <li><a href="#">周边商品</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情链接</h4>
+                    <ul>
+                        <li><a href="#">圆谷制作</a></li>
+                        <li><a href="#">特摄之家</a></li>
+                        <li><a href="#">奥特曼中国</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 超级奥特曼图鉴站. 保留所有权利. 本站内容仅供学习交流，不代表官方立场。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('show');
+        }
+
+        // FAQ Accordion
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            item.classList.toggle('active');
+        }
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('nav-list').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
